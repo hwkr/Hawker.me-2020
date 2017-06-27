@@ -1,0 +1,39 @@
+{
+  "name": "hawker",
+  "version": "2.0.0",
+  "description": "The Portfolio of Brynn Hawker",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hwkr/hwkr.github.io.git"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "build-prefix-links": "gatsby build --prefix-links",
+    "deploy": "gatsby build --prefix-links && gh-pages -d public",
+    "develop": "gatsby develop",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brynn Hawker",
+  "license": "MIT",
+  "dependencies": {
+    "babel-eslint": "^6.1.2",
+    "eslint": "^3.2.2",
+    "eslint-config-airbnb": "^10.0.0",
+    "eslint-import-resolver-webpack": "^0.7.0",
+    "eslint-plugin-import": "^1.12.0",
+    "eslint-plugin-jsx-a11y": "^2.0.1",
+    "eslint-plugin-react": "^6.0.0",
+    "gatsby": "^0.12.28",
+    "prop-types": "^15.5.10",
+    "query-string": "^4.3.4",
+    "raw-loader": "^0.5.1",
+    "react": "^15.4.2",
+    "react-helmet": "^4.0.0",
+    "react-svg-inline": "^2.0.0",
+    "validator": "^7.0.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.0.0"
+  }
+}

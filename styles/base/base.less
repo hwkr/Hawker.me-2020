@@ -1,0 +1,56 @@
+// Base
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: @html-font-size;
+  line-height: @html-line-height;
+  background: @html-bg;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: @body-bg;
+  color: @body-font-color;
+  font-family: @body-font-family;
+  font-size: @font-size;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: @link-color;
+  outline: none;
+  text-decoration: none;
+
+  &:focus {
+    .control-shadow();
+  }
+
+  &:focus,
+  &:hover,
+  &:active,
+  &.active {
+    color: @link-color-dark;
+    text-decoration: underline;
+  }
+}
+
+// Brand
+.brand {
+  svg {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .outline {
+    fill: @primary-color-light;
+  }
+  .type {
+    fill: @secondary-color;
+  }
+}
