@@ -7,6 +7,7 @@ import Head from '../components/parts/Head';
 import Footer from '../components/parts/Footer';
 
 import '../styles/main.less';
+import '../font/hawkicon.font';
 
 export default class extends Component {
 
