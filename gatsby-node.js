@@ -1,10 +1,33 @@
-/* eslint no-param-reassign: "off" */
+/* eslint no-param-reassign: "off", func-names: "off", prefer-arrow-callback: "off" */
+
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 exports.modifyWebpackConfig = function (config, stage) {
-  config.loader('css', function (cfg) {
-    cfg.test = /\.font\.?(js|json)$/;
-    cfg.loader = 'style!css!less!webfonts';
-    return cfg;
-  });
+  if (stage === 'develop') {
+    config.removeLoader('less');
+    config.loader('less', function (cfg) {
+      cfg.test = /\.less$/;
+      cfg.loader = 'style!css?sourceMap!less?sourceMap';
+      return cfg;
+    });
+    config.loader('font', function (cfg) {
+      cfg.test = /\.font\.?(js|json)$/;
+      cfg.loader = 'style!css?sourceMap!less?sourceMap!webfonts';
+      return cfg;
+    });
+  } else {
+    config.removeLoader('less');
+    config.loader('less', function (cfg) {
+      cfg.test = /\.less$/;
+      cfg.loader = ExtractTextPlugin.extract('css!less?compress');
+      return cfg;
+    });
+    config.loader('font', function (cfg) {
+      cfg.test = /\.font\.?(js|json)$/;
+      cfg.loader = ExtractTextPlugin.extract('css!less?compress!webfonts');
+      return cfg;
+    });
+    config.plugin('extract-css', ExtractTextPlugin, ['styles.css', { allChunks: true }]);
+  }
   return config;
 };
