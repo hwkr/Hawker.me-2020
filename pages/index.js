@@ -5,7 +5,12 @@ import { config } from 'config';
 
 import Icon from '../components/parts/Icon';
 
+
 export default class IndexPage extends Component {
+
+  openChat = () => {
+    window.open(config.chat_url, 'newwindow', 'width=500, height=600'); return false;
+  }
 
   render() {
     return (
