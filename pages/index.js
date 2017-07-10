@@ -15,12 +15,6 @@ export default class IndexPage extends Component {
   render() {
     return (
       <div className="home">
-        <Helmet
-          title={config.siteTitle}
-          meta={[
-            { name: 'description', content: config.description },
-          ]}
-        />
         <button
           className="btn btn-accent btn-action btn-lg tooltip tooltip-left circle"
           data-tooltip="Talk to me right meow"

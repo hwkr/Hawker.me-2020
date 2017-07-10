@@ -1,7 +1,7 @@
 import React, { Component /* , PropTypes */ } from 'react';
 import Helmet from 'react-helmet';
 
-import Config from 'Config';
+import { config } from 'config';
 
 export default class Head extends Component {
   static propTypes = {
@@ -16,8 +16,11 @@ export default class Head extends Component {
   render() {
     return (
       <Helmet
-        titleTemplate={`%s – ${Config.title}`}
-        defaultTitle={Config.title}
+        titleTemplate={`%s – ${config.siteTitle}`}
+        defaultTitle={config.siteTitle}
+        meta={[
+          { name: 'description', content: config.description },
+        ]}
       />
     );
   }
