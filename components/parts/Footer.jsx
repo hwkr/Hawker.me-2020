@@ -5,6 +5,7 @@ import Config from 'Config';
 
 import Icon from './Icon';
 import Brand from './Brand';
+import PageLink from '../common/PageLink';
 
 export default class Footer extends Component {
   static propTypes = {
@@ -27,7 +28,7 @@ export default class Footer extends Component {
     ]);
     return (
       <footer>
-        <Brand />
+        <PageLink className="btn btn-link btn-sm" to="/"><Brand /></PageLink>
         <p className="made-with hide-xs">Made with <Icon name="heart" /> in Victoria, BC</p>
         <ul className="social">
           {Config.social_links.map((link, i) =>

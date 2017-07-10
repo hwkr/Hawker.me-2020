@@ -8,13 +8,14 @@ export default class PageLink extends PureComponent {
   static propTypes = {
     to: PropTypes.string,
     children: PropTypes.node,
+    className: PropTypes.string,
   }
 
   static defaultProps = {
   }
 
   render() {
-    const { to, children } = this.props;
+    const { to, children, className } = this.props;
 
     // add a trailing slash if there is not one (to support SPA)
     let linkTo = to;
@@ -23,7 +24,7 @@ export default class PageLink extends PureComponent {
     }
 
     return (
-      <Link to={prefixLink(linkTo)}>
+      <Link className={className} to={prefixLink(linkTo)}>
         {children}
       </Link>
     );
