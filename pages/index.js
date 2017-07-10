@@ -21,6 +21,13 @@ export default class IndexPage extends Component {
             { name: 'description', content: config.description },
           ]}
         />
+        <button
+          className="btn btn-primary btn-action btn-contact btn-lg tooltip tooltip-left circle"
+          data-tooltip="Talk to me right meow"
+          onClick={this.openChat}
+        >
+          <Icon name="social-facebook-messenger" size={1.5} />
+        </button>
         <main className="hero">
           <div>
             <h1>
@@ -31,9 +38,6 @@ export default class IndexPage extends Component {
               </small>
             </h1>
             <br />
-            <button className="btn btn-primary btn-lg" onClick={this.openChat}>
-              <Icon name="social-facebook-messenger-bubble" size={1.3} /> Talk to me right meow
-            </button>
           </div>
         </main>
       </div>

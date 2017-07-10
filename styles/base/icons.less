@@ -1,7 +1,7 @@
 // CSS Icons
 @icon-border-width: .2rem;
 
-.icon {
+.css-icon {
   box-sizing: border-box;
   display: inline-block;
   font-size: inherit;
@@ -22,14 +22,14 @@
 }
 
 // Icon arrows
-.icon-arrow-down,
-.icon-arrow-left,
-.icon-arrow-right,
-.icon-arrow-up,
-.icon-downward,
-.icon-back,
-.icon-forward,
-.icon-upward {
+.css-icon-arrow-down,
+.css-icon-arrow-left,
+.css-icon-arrow-right,
+.css-icon-arrow-up,
+.css-icon-downward,
+.css-icon-back,
+.css-icon-forward,
+.css-icon-upward {
   &::before {
     border: @icon-border-width solid currentColor;
     border-bottom: 0;
@@ -41,25 +41,25 @@
   }
 }
 
-.icon-arrow-down,
-.icon-downward {
+.css-icon-arrow-down,
+.css-icon-downward {
   transform: rotate(-90deg);
 }
 
-.icon-arrow-right,
-.icon-forward {
+.css-icon-arrow-right,
+.css-icon-forward {
   transform: rotate(180deg);
 }
 
-.icon-arrow-up,
-.icon-upward {
+.css-icon-arrow-up,
+.css-icon-upward {
   transform: rotate(90deg);
 }
 
-.icon-downward,
-.icon-back,
-.icon-forward,
-.icon-upward {
+.css-icon-downward,
+.css-icon-back,
+.css-icon-forward,
+.css-icon-upward {
   &::before {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
@@ -73,7 +73,7 @@
 }
 
 // Icon caret
-.icon-caret {
+.css-icon-caret {
   &::before {
     border-top: .3em solid currentColor;
     border-right: .3em solid transparent;
@@ -86,7 +86,7 @@
 }
 
 // Icon menu
-.icon-menu {
+.css-icon-menu {
   &::before {
     background: currentColor;
     box-shadow: 0 -.35em, 0 .35em;
@@ -97,7 +97,7 @@
 }
 
 // Icon apps
-.icon-apps {
+.css-icon-apps {
   &::before {
     background: currentColor;
     box-shadow: -.35em -.35em, -.35em 0, -.35em .35em, 0 -.35em, 0 .35em, .35em -.35em, .35em 0, .35em .35em;
@@ -108,8 +108,8 @@
 }
 
 // Icon resize
-.icon-resize-horiz,
-.icon-resize-vert {
+.css-icon-resize-horiz,
+.css-icon-resize-vert {
   &::before,
   &::after {
     border: @icon-border-width solid currentColor;
@@ -127,7 +127,7 @@
   }
 }
 
-.icon-resize-horiz {
+.css-icon-resize-horiz {
   &::before {
     transform: translate(-90%, -50%) rotate(-45deg);
   }
@@ -137,8 +137,8 @@
 }
 
 // Icon more
-.icon-more-horiz,
-.icon-more-vert {
+.css-icon-more-horiz,
+.css-icon-more-vert {
   &::before {
     background: currentColor;
     box-shadow: -.4em 0, .4em 0;
@@ -148,16 +148,16 @@
     width: .3rem;
   }
 }
-.icon-more-vert {
+.css-icon-more-vert {
   &::before {
     box-shadow: 0 -.4em, 0 .4em;
   }
 }
 
 // Icon plus, minus, cross
-.icon-plus,
-.icon-minus,
-.icon-cross {
+.css-icon-plus,
+.css-icon-minus,
+.css-icon-cross {
   &::before {
     background: currentColor;
     content: "";
@@ -165,8 +165,8 @@
     width: 100%;
   }
 }
-.icon-plus,
-.icon-cross {
+.css-icon-plus,
+.css-icon-cross {
   &::after {
     background: currentColor;
     content: "";
@@ -174,7 +174,7 @@
     width: @icon-border-width;
   }
 }
-.icon-cross {
+.css-icon-cross {
   &::before {
     width: 100%;
   }
@@ -188,7 +188,7 @@
 }
 
 // Icon check
-.icon-check {
+.css-icon-check {
   &::before {
     border: @icon-border-width solid currentColor;
     border-right: 0;
@@ -201,7 +201,7 @@
 }
 
 // Icon stop
-.icon-stop {
+.css-icon-stop {
   border: @icon-border-width solid currentColor;
   border-radius: 50%;
   &::before {
@@ -214,7 +214,7 @@
 }
 
 // Icon shutdown
-.icon-shutdown {
+.css-icon-shutdown {
   border: @icon-border-width solid currentColor;
   border-radius: 50%;
   border-top-color: transparent;
@@ -228,7 +228,7 @@
 }
 
 // Icon refresh
-.icon-refresh {
+.css-icon-refresh {
   &::before {
     border: @icon-border-width solid currentColor;
     border-radius: 50%;
@@ -250,7 +250,7 @@
 }
 
 // Icon search
-.icon-search {
+.css-icon-search {
   &::before {
     border: @icon-border-width solid currentColor;
     border-radius: 50%;
@@ -273,7 +273,7 @@
 }
 
 // Icon edit
-.icon-edit {
+.css-icon-edit {
   &::before {
     border: @icon-border-width solid currentColor;
     content: "";
@@ -295,7 +295,7 @@
 }
 
 // Icon delete
-.icon-delete {
+.css-icon-delete {
   &::before {
     border: @icon-border-width solid currentColor;
     border-bottom-left-radius: @border-radius;
@@ -317,7 +317,7 @@
 }
 
 // Icon share
-.icon-share {
+.css-icon-share {
   border: @icon-border-width solid currentColor;
   border-radius: @border-radius;
   border-right: 0;
@@ -345,7 +345,7 @@
 }
 
 // Icon flag
-.icon-flag {
+.css-icon-flag {
   &::before {
     background: currentColor;
     content: "";
@@ -367,7 +367,7 @@
 }
 
 // Icon bookmark
-.icon-bookmark {
+.css-icon-bookmark {
   &::before {
     border: @icon-border-width solid currentColor;
     border-bottom: 0;
@@ -390,8 +390,8 @@
 }
 
 // Icon download & upload
-.icon-download,
-.icon-upload {
+.css-icon-download,
+.css-icon-upload {
   border-bottom: @icon-border-width solid currentColor;
   &::before {
     border: @icon-border-width solid currentColor;
@@ -411,7 +411,7 @@
   }
 }
 
-.icon-upload {
+.css-icon-upload {
   &::before {
     transform: translate(-50%, -60%) rotate(45deg);
   }
@@ -421,7 +421,7 @@
 }
 
 // Icon time
-.icon-time {
+.css-icon-time {
   border: @icon-border-width solid currentColor;
   border-radius: 50%;
   &::before {
@@ -442,7 +442,7 @@
 }
 
 // Icon mail
-.icon-mail {
+.css-icon-mail {
   &::before {
     border: @icon-border-width solid currentColor;
     border-radius: @border-radius;
@@ -462,7 +462,7 @@
 }
 
 // Icon people
-.icon-people {
+.css-icon-people {
   &::before {
     border: @icon-border-width solid currentColor;
     border-radius: 50%;
@@ -482,7 +482,7 @@
 }
 
 // Icon message
-.icon-message {
+.css-icon-message {
   border: @icon-border-width solid currentColor;
   border-bottom: 0;
   border-radius: @border-radius;
@@ -511,7 +511,7 @@
 }
 
 // Icon photo
-.icon-photo {
+.css-icon-photo {
   border: @icon-border-width solid currentColor;
   border-radius: @border-radius;
   &::before {
@@ -536,7 +536,7 @@
 }
 
 // Icon link
-.icon-link {
+.css-icon-link {
   &::before,
   &::after {
     border: @icon-border-width solid currentColor;
@@ -555,7 +555,7 @@
 }
 
 // Icon location
-.icon-location {
+.css-icon-location {
   &::before {
     border: @icon-border-width solid currentColor;
     border-radius: 50% 50% 50% 0;
@@ -575,7 +575,7 @@
 }
 
 // Icon emoji
-.icon-emoji {
+.css-icon-emoji {
   border: @icon-border-width solid currentColor;
   border-radius: 50%;
   &::before {
@@ -601,7 +601,12 @@
 .btn,
 .toast,
 .menu {
-  .icon {
+  .css-icon {
     vertical-align: -10%;
+  }
+}
+.btn-action {
+  .icon:before {
+    vertical-align: 0%;
   }
 }
