@@ -6,8 +6,8 @@ footer {
   position: fixed;
   bottom: 0;
 
-  background: @bg-color;
-  color: darken(@secondary-color, 20%);
+  background: @bg-color-dark;
+  // color: @light-color;
 
   font-size: @font-size - 0.2rem;
 
@@ -16,6 +16,7 @@ footer {
   justify-content: space-between;
 
   .brand {
+    padding: @layout-padding/4 0;
     svg {
       height: 100%;
     }

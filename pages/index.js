@@ -22,7 +22,7 @@ export default class IndexPage extends Component {
           ]}
         />
         <button
-          className="btn btn-primary btn-action btn-contact btn-lg tooltip tooltip-left circle"
+          className="btn btn-accent btn-action btn-lg tooltip tooltip-left circle"
           data-tooltip="Talk to me right meow"
           onClick={this.openChat}
         >
