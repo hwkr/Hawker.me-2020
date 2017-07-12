@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import { config } from 'config';
-
 export default class extends Component {
 
   static propTypes = {
@@ -22,10 +20,12 @@ export default class extends Component {
     return (
       <div className="markdown">
         <Helmet
-          title={`${config.siteTitle} | ${page.title}`}
+          title={page.title}
           meta={meta}
         />
-        <div dangerouslySetInnerHTML={{ __html: page.body }} />
+        <div className="container grid-480">
+          <div dangerouslySetInnerHTML={{ __html: page.body }} />
+        </div>
       </div>
     );
   }
