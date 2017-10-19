@@ -33,23 +33,21 @@ near Seattle — shown in figure \[fig:msMainCampus\]. In addition to main
 campus the are several satellite offices also in the Puget Sound area.
 These offices are typically organized in to four areas,
 
-Redmond:   which has the Redmond West, Redmond Town Centre and Millennium
-    offices.
 
-Bellevue
-
-:   which has the Lincoln Square, Bravern, City Centre and Civica
+<dl class="inline">
+ <dt>Redmond</dt>
+ <dd>which has the Redmond West, Redmond Town Centre and Millennium
+    offices.</dd>
+ <dt>Bellevue</dt>
+ <dd>which has the Lincoln Square, Bravern, City Centre and Civica
     offices in downtown Bellevue and the Advanta offices in south
-    Bellevue.
-
-Seattle
-
-:   which has the Westlake office in Seattle’s technology district —
-    South Lake Union.
-
-Issaquah
-
-:   which has the Sammamish office.
+    Bellevue.</dd>
+ <dt>Seattle</dt>
+ <dd>which has the Westlake office in Seattle’s technology district —
+    South Lake Union.</dd>
+ <dt>Issaquah</dt>
+ <dd>which has the Sammamish office.</dd>
+</dl>
 
 ![Microsoft Main Campus in Redmond,
 Washington[]{data-label="fig:msMainCampus"}](Resources/Microsoft-World-Map){width="\textwidth"}
