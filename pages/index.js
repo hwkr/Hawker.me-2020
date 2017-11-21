@@ -27,7 +27,7 @@ export default class IndexPage extends Component {
             <div>
               <h1>
                 <small>
-                  Hi! I&apos;m
+                  Hello! I&apos;m
                 </small>
                 <br />
                 <big>
