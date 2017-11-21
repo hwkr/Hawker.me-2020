@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 
-import { config } from 'config';
+import Config from 'Config';
 
-import Icon from '../components/parts/Icon';
+import Icon from '../components/common/Icon';
+import SocialLinks from '../components/common/SocialLinks';
 
 
 export default class IndexPage extends Component {
 
   openChat = () => {
-    window.open(config.chat_url, 'newwindow', 'width=500, height=600'); return false;
+    window.open(Config.chat_url, 'newwindow', 'width=500, height=600'); return false;
   }
 
   render() {
@@ -26,19 +27,11 @@ export default class IndexPage extends Component {
           <div className="hero">
             <div>
               <h1>
-                <small>
-                  Hello! I&apos;m
-                </small>
-                <br />
-                <big>
-                  Brynn
-                </big>
-                <br />
-                <small>
-                  an artist and designer
-                </small>
+                <small>Hello! I&apos;m </small><br />
+                <big>Brynn<br />Hawker</big><br />
+                <small>Artist / Designer</small>
               </h1>
-              <br />
+              <SocialLinks links={Config.social_links} linkClass={['btn', 'btn-link', 'btn-lg', 'tooltip-bottom']} />
             </div>
           </div>
         </header>
