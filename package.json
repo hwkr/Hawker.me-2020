@@ -11,7 +11,7 @@
     "build": "gatsby build",
     "build-prefix-links": "gatsby build --prefix-links",
     "deploy": "gatsby build --prefix-links && gh-pages -d public",
-    "develop": "gatsby develop",
+    "start": "gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Brynn Hawker",
