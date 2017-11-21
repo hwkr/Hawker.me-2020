@@ -16,24 +16,32 @@ export default class IndexPage extends Component {
     return (
       <div className="home">
         <button
-          className="btn btn-accent btn-action btn-lg tooltip tooltip-left circle"
+          className="btn btn-primary btn-action btn-lg tooltip tooltip-left circle"
           data-tooltip="Talk to me right meow"
           onClick={this.openChat}
         >
           <Icon name="social-facebook-messenger" size={1.5} />
         </button>
-        <main className="hero">
-          <div>
-            <h1>
-              Hi! I&apos;m Brynn
+        <header className="splash">
+          <div className="hero">
+            <div>
+              <h1>
+                <small>
+                  Hi! I&apos;m
+                </small>
+                <br />
+                <big>
+                  Brynn
+                </big>
+                <br />
+                <small>
+                  an artist and designer
+                </small>
+              </h1>
               <br />
-              <small>
-                It's nice to meet you!
-              </small>
-            </h1>
-            <br />
+            </div>
           </div>
-        </main>
+        </header>
       </div>
     );
   }
