@@ -29,7 +29,7 @@ export default class IndexPage extends Component {
               <h1>
                 <small>Hello! I&apos;m </small><br />
                 <big>Brynn<br />Hawker</big><br />
-                <small>Artist / Designer</small>
+                <small>an artist / designer</small>
               </h1>
               <SocialLinks links={Config.social_links} linkClass={['btn', 'btn-link', 'btn-lg', 'tooltip-bottom']} />
             </div>
