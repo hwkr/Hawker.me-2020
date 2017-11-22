@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Helmet from 'react-helmet';
 
 import Config from 'Config';
+
+import CampusMapsIcon from 'img/campus-maps/campus-maps-icon.svg';
 
 import Icon from '../components/common/Icon';
 import SocialLinks from '../components/common/SocialLinks';
@@ -35,6 +36,25 @@ export default class IndexPage extends Component {
             </div>
           </div>
         </header>
+        <main className="container grid-480">
+          <section className="card card-clear card-link">
+            <div className="columns col-gapless">
+              <div className="column col-4">
+                <div className="card-image">
+                  <img src={CampusMapsIcon} alt="Campus Maps" className="img-responsive" />
+                </div>
+              </div>
+              <div className="column col-8">
+                <div className="card-header">
+                  <div className="card-title h5">Campus Maps</div>
+                  <div className="card-subtitle text-gray">UX Design / Digital Illustration</div>
+                </div>
+                <div className="card-body">
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
       </div>
     );
   }
