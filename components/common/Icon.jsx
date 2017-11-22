@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-export default class Footer extends Component {
+export default class Icon extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     size: PropTypes.number,

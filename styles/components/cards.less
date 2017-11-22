@@ -5,9 +5,15 @@
   border-radius: @border-radius;
   display: block;
 
-  &.card-clear {
-    background: none;
-    border: none;
+  &.card-square {
+    height: 100%;
+
+    &::before {
+      content: '';
+      display: block;
+      float: left;
+      padding-bottom: 100%;
+    }
   }
 
   &.card-link {
