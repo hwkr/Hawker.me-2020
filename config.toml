@@ -1,5 +1,3 @@
-linkPrefix = "/"
-
 siteTitle="Brynn Hawker"
 description="The personal portfolio for Brynn Hawker, a designer from Victoria, BC."
 host="hawker.me"
@@ -88,4 +86,3 @@ chat_url="https://www.messenger.com/t/bnhwkr"
   tooltip="Game with me"
   icon="social-steam"
 
-noProductionJavascript = false
