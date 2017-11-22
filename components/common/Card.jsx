@@ -20,14 +20,14 @@ export default class Card extends Component {
   render() {
     const { title, subtitle, body, image } = this.props;
     return (
-      <div className="card card-link card-clear">
+      <div className="card card-clear card-link">
         <div className="columns col-gapless">
-          <div className="column col-5">
+          <div className="column col-4">
             <div className="card-image">
               <img src={image} alt={title} className="img-responsive" />
             </div>
           </div>
-          <div className="column col-7">
+          <div className="column col-8">
             <div className="card-header">
               <div className="card-title h5">{title}</div>
               <div className="card-subtitle">{subtitle}</div>
