@@ -6,7 +6,7 @@ import CampusMapsImg from 'img/campus-maps/campus-maps-icon.svg';
 
 import Icon from '../components/common/Icon';
 import SocialLinks from '../components/common/SocialLinks';
-import Square from '../components/common/Square';
+import Card from '../components/common/Card';
 
 
 export default class IndexPage extends Component {
@@ -37,13 +37,13 @@ export default class IndexPage extends Component {
             </div>
           </div>
         </header>
-        <main className="container grid-720 projects">
+        <main className="container grid-960 projects">
           <div className="columns">
             <div className="column col-6 col-md-12">
-              <Square title="Campus Maps" subtitle="UX Design / Digital Illustration" image={CampusMapsImg} />
+              <Card title="Campus Maps" subtitle="UX Design / Digital Illustration" image={CampusMapsImg} />
             </div>
             <div className="column col-6 col-md-12">
-              <Square title="Campus Maps" subtitle="UX Design / Digital Illustration" image={CampusMapsImg} />
+              <Card title="Campus Maps" subtitle="UX Design / Digital Illustration" image={CampusMapsImg} />
             </div>
           </div>
         </main>
