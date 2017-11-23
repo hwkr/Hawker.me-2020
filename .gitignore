@@ -1,5 +1,6 @@
 ### Gatsby
 public/
+.cache/
 .gatsby-context.js
 
 ### Node ###
