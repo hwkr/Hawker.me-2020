@@ -1,5 +1,8 @@
+/* eslint react/prop-types: "off" */
 import React from 'react';
 import Helmet from 'react-helmet';
+
+import favicon from 'file-loader!./img/favicon.png';
 
 const BUILD_TIME = new Date().getTime();
 
@@ -21,6 +24,7 @@ const HTML = (props) => {
           name="viewport"
           content="width=device-width, initial-scale=1.0"
         />
+        <link rel="shortcut icon" href={`${favicon}?t=${BUILD_TIME}`} />
         {head.title.toComponent()}
         {head.meta.toComponent()}
         {css}
