@@ -1,10 +1,9 @@
 /* eslint no-param-reassign: "off", func-names: "off", prefer-arrow-callback: "off" */
 
-const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-exports.modifyWebpackConfig = function ({config, stage}) {
-   switch (stage) {
+exports.modifyWebpackConfig = function ({ config, stage }) {
+  switch (stage) {
     case 'develop': {
       config.removeLoader('less');
       config.loader('less', function (cfg) {
@@ -32,7 +31,7 @@ exports.modifyWebpackConfig = function ({config, stage}) {
         return cfg;
       });
       config.plugin('extract-css', ExtractTextPlugin, ['styles.css', { allChunks: true }]);
-    return config;
+      return config;
     }
   }
 };
