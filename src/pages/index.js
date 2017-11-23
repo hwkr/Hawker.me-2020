@@ -2,12 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import graphql from 'graphql';
 
-import CampusMapsImg from '../img/campus-maps/campus-maps-icon.svg';
-
 import Icon from '../components/common/Icon';
 import SocialLinks from '../components/common/SocialLinks';
-import Card from '../components/common/Card';
-
 
 export default class IndexPage extends Component {
 
@@ -42,16 +38,6 @@ export default class IndexPage extends Component {
             </div>
           </div>
         </header>
-        <main className="container grid-960 projects">
-          <div className="columns">
-            <div className="column col-6 col-md-12">
-              <Card title="Campus Maps" subtitle="UX Design / Digital Illustration" image={CampusMapsImg} />
-            </div>
-            <div className="column col-6 col-md-12">
-              <Card title="Campus Maps" subtitle="UX Design / Digital Illustration" image={CampusMapsImg} />
-            </div>
-          </div>
-        </main>
       </div>
     );
   }
