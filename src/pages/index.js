@@ -12,7 +12,7 @@ export default class IndexPage extends Component {
   }
 
   openChat = () => {
-    window.open(this.props.data.chat_url, 'newwindow', 'width=500, height=600'); return false;
+    window.open(this.props.data.site.siteMetadata.chat_url, 'newwindow', 'width=500, height=600'); return false;
   }
 
   render() {
@@ -48,6 +48,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title,
+        chat_url,
         social_links {
           href,
           tooltip,

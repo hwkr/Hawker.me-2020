@@ -12,14 +12,15 @@
       justify-content: flex-start;
       align-items: center;
 
-      min-height: 90vh;
+      min-height: 80vh;
       max-width: @size-md;
       margin: 0 auto;
+      padding: 0 @layout-padding-lg;
 
       h1 {
         font-size: 8rem;
         line-height: 0.5;
-        padding: 0 @layout-padding/2;
+        padding: 0 @layout-padding;
         margin-bottom: @layout-margin*2;
 
         big {
@@ -39,7 +40,14 @@
       }
       .social {
          margin: 0;
-       }
+      }
+
+      @media screen and (max-width: @size-md ) {
+        min-height: 60vh;
+        h1 {
+          font-size: 6rem;
+        }
+      }
     }
 
   }
