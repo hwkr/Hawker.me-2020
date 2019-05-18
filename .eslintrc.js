@@ -9,7 +9,7 @@ module.exports = {
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
-      "jsx": true,
+      "jsx": false,
       "classes": true
     },
     "sourceType": "module"
@@ -23,7 +23,8 @@ module.exports = {
     "import/no-unresolved": "off",
     "import/no-extraneous-dependencies": "off",
     "react/jsx-filename-extension": "off",
-    "react/prefer-stateless-function": "off"
+    "react/prefer-stateless-function": "off",
+    "react/forbid-prop-types": "off"
   },
   "plugins": [
     "react"

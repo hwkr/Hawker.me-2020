@@ -98,31 +98,11 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'pages',
-        path: `${__dirname}/src/pages/`,
-      },
-    },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 690,
-            },
-          },
-          {
-            resolve: 'gatsby-remark-responsive-iframe',
-          },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
-        ],
+        name: 'src',
+        path: `${__dirname}/src/`,
       },
     },
     'gatsby-plugin-less',
-    'gatsby-plugin-sharp',
     'gatsby-transformer-toml',
   ],
 };
