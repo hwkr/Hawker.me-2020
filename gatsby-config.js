@@ -95,6 +95,7 @@ module.exports = {
     chat_url: 'https://www.messenger.com/t/bnhwkr',
   },
   plugins: [
+    'gatsby-transformer-yaml-full',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -103,6 +104,5 @@ module.exports = {
       },
     },
     'gatsby-plugin-less',
-    'gatsby-transformer-toml',
   ],
 };
