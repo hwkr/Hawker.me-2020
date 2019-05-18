@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 
-// eslint-disable-next-line no-unused-vars
 import styles from '../styles/main.less';
+import fonts from '../font/hawkicon.font.js';
 
 import Icon from '../components/common/Icon';
 import SocialLinks from '../components/common/SocialLinks';
