@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import Helmet from 'react-helmet';
 
 import Layout from '../components/parts/Layout';
 import Icon from '../components/common/Icon';
@@ -22,7 +21,6 @@ export default class IndexPage extends Component {
     const { social_links: socialLinks } = data.site.siteMetadata;
     return (
       <Layout className="home">
-        <Helmet title={data.site.siteMetadata.title} />
         <button
           className="btn btn-primary btn-action btn-lg tooltip tooltip-left circle"
           data-tooltip="Talk to me right meow"

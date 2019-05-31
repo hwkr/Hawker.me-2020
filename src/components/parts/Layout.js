@@ -48,6 +48,7 @@ export default class Layout extends Component {
           console.log(...console_cats);
           return (
             <div className={className}>
+              <Helmet titleTemplate={`%s | ${title}`} defaultTitle={title} />
               { children }
               <Footer socialLinks={social_links} />
             </div>
