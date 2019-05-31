@@ -8,18 +8,8 @@ import SocialLinks from '../common/SocialLinks';
 
 export default class Footer extends Component {
   static propTypes = {
-    data: PropTypes.any,
-    socialLinks: PropTypes.array,
+    socialLinks: PropTypes.array.isRequired,
   }
-
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
-
-  // static defaultProps = {
-  // }
 
   render() {
     const { socialLinks } = this.props;

@@ -1,12 +1,9 @@
-/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 
-import styles from '../styles/main.less';
-import fonts from '../font/hawkicon.font.js';
-
+import Layout from '../components/parts/Layout';
 import Icon from '../components/common/Icon';
 import SocialLinks from '../components/common/SocialLinks';
 
@@ -24,7 +21,7 @@ export default class IndexPage extends Component {
     const { data } = this.props;
     const { social_links: socialLinks } = data.site.siteMetadata;
     return (
-      <div className="home">
+      <Layout className="home">
         <Helmet title={data.site.siteMetadata.title} />
         <button
           className="btn btn-primary btn-action btn-lg tooltip tooltip-left circle"
@@ -52,7 +49,7 @@ export default class IndexPage extends Component {
             </div>
           </div>
         </header>
-      </div>
+      </Layout>
     );
   }
 }

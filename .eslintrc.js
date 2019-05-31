@@ -20,11 +20,13 @@ module.exports = {
   },
   "rules": {
     "max-len": "off",
+    "camelcase": "off",
     "import/no-unresolved": "off",
     "import/no-extraneous-dependencies": "off",
     "react/jsx-filename-extension": "off",
     "react/prefer-stateless-function": "off",
-    "react/forbid-prop-types": "off"
+    "react/forbid-prop-types": "off",
+    "react/jsx-one-expression-per-line": "off"
   },
   "plugins": [
     "react"
