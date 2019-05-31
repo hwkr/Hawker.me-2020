@@ -8,10 +8,6 @@ export default class Icon extends Component {
     size: PropTypes.number,
   }
 
-  static defaultProps = {
-    size: '',
-  }
-
   render() {
     const { name, size } = this.props;
 

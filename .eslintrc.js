@@ -28,6 +28,7 @@ module.exports = {
     "react/forbid-prop-types": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/no-array-index-key": "off",
+    "react/require-default-props": "warn",
   },
   "plugins": [
     "react"
