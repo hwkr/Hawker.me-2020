@@ -31,13 +31,13 @@ export default class SocialLinks extends Component {
     const { linkClass, links } = this.props;
     return (
       <ul className="social">
-        {links.map((link, i) =>
+        {links.map((link, i) => (
           <li key={i}>
             <a href={link.href} className={classNames(...linkClass, { tooltip: link.tooltip })} data-tooltip={link.tooltip} target="_blank" rel="noopener noreferrer external">
               <Icon name={link.icon} />
             </a>
           </li>
-        )}
+        ))}
       </ul>
     );
   }
