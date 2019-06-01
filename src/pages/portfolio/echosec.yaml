@@ -1,11 +1,12 @@
 title: Echosec
 description: Er mah gurd more maps
+date: 2018-06-01
 images:
   -
-    alt: Bloop
-    caption: Blorp
-    src: "../img/soup.png"
+    alt: A mockup of the Echosec Website
+    src: !file ../../img/echosec/website-mockup.png
+    caption: It's a caption
   -
-    alt: Bloop
-    caption: Blorp
-    src: "../img/soup.png"
+    alt: Another mockup of the Echosec Website
+    src: !file ../../img/echosec/website-mockup-1.png
+    caption: It's also a caption

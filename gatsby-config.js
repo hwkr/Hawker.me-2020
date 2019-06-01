@@ -95,7 +95,19 @@ module.exports = {
     chat_url: 'https://www.messenger.com/t/bnhwkr',
   },
   plugins: [
-    'gatsby-transformer-yaml-full',
+    {
+      resolve: 'gatsby-transformer-yaml-full',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-yaml-full-file',
+            options: {
+              path: `${__dirname}/src/`,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -103,6 +115,8 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-less',
   ],
 };
