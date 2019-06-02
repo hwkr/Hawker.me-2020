@@ -1,12 +1,11 @@
 title: Echosec
 description: Er mah gurd more maps
 date: 2018-06-01
-images:
+gallery:
   -
     alt: A mockup of the Echosec Website
     src: !file ../../img/echosec/website-mockup.png
-    caption: It's a caption
   -
-    alt: Another mockup of the Echosec Website
-    src: !file ../../img/echosec/website-mockup-1.png
-    caption: It's also a caption
+    alt: A mockup of the Echosec App Login Page
+    src: !file ../../img/echosec/login-mockup.png
+    caption: Redesigned Echosec Login Page

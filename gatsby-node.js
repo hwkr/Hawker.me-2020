@@ -61,7 +61,7 @@ exports.createPages = ({ graphql, actions }) => {
     result.data.allPortfolioYaml.edges.forEach(({ node }) => {
       createPage({
         path: node.fields.slug,
-        component: path.resolve('./src/templates/portfolio-entry.js'),
+        component: path.resolve('./src/templates/portfolio-project.js'),
         context: {
           slug: node.fields.slug,
         },
