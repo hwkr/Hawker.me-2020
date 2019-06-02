@@ -105,6 +105,7 @@ module.exports = {
               path: `${__dirname}/src/`,
             },
           },
+          'gatsby-yaml-full-markdown',
         ],
       },
     },

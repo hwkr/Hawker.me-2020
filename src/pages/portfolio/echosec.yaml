@@ -1,5 +1,9 @@
 title: Echosec
-description: Er mah gurd more maps
+description: !markdown |
+  During my time at Echosec I worked with the executive and design teams to redesign their customer facing website. I implemented the design and rebuilt the analytics to better capture user interactions. I was able to validate the new design and saw a noticeable improvement in conversion.
+
+  I also redesigned the app login page simplifying the number steps required to sign up for an account. By using simple graphics I was also able to improve load times significantly.
+
 date: 2018-06-01
 gallery:
   -

@@ -32,9 +32,8 @@ export default ({ data }) => {
                 <div className="card-title h2">{title}</div>
                 <div className="card-subtitle text-gray">UI UX</div>
               </div>
-              <div className="card-body">
-                {description}
-              </div>
+              { /* eslint-disable-next-line react/no-danger */ }
+              <div className="card-body" dangerouslySetInnerHTML={{ __html: description }} />
             </div>
           </div>
         </div>
