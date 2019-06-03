@@ -7,7 +7,15 @@ import Helmet from 'react-helmet';
 import Layout from '../components/parts/Layout';
 
 export default ({ data }) => {
-  const { title, description, childrenPortfolioGalleryYaml } = data.portfolioYaml;
+  const {
+    title,
+    description,
+    tags,
+    childrenPortfolioGalleryYaml,
+  } = data.portfolioYaml;
+
+  const { tag_spec } = data.site.siteMetadata;
+
   return (
     <Layout className="portfolio-project">
       <Helmet title={title} />
@@ -30,7 +38,13 @@ export default ({ data }) => {
             <div className="card">
               <div className="card-header">
                 <div className="card-title h2">{title}</div>
-                <div className="card-subtitle text-gray">UI UX</div>
+                <div className="card-subtitle text-gray">
+                  {tags.map((tag, i) => (
+                    <span className="label" key={i}>
+                      {tag_spec.find(t => t.id === tag).label}
+                    </span>
+                  ))}
+                </div>
               </div>
               { /* eslint-disable-next-line react/no-danger */ }
               <div className="card-body" dangerouslySetInnerHTML={{ __html: description }} />
@@ -48,6 +62,7 @@ export const query = graphql`
       title
       description
       date
+      tags
       childrenPortfolioGalleryYaml {
         alt
         caption
@@ -57,6 +72,14 @@ export const query = graphql`
               ...GatsbyImageSharpFluid_noBase64
             }
           }
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        tag_spec {
+          id
+          label
         }
       }
     }

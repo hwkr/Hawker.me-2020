@@ -5,6 +5,20 @@ module.exports = {
     host: 'hawker.me',
     tracking_id: 'UA-71953845-1',
     themecolor: '#5764c6',
+    tag_spec: [
+      {
+        id: 'uiux',
+        label: 'UI / UX Design',
+      },
+      {
+        id: 'visual',
+        label: 'Visual Design',
+      },
+      {
+        id: 'brand',
+        label: 'Branding',
+      },
+    ],
     console_cats: [
       String.raw`
 %c           *     ,MMM8&&&.            *
