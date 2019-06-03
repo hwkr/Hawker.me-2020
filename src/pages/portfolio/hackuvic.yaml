@@ -1,0 +1,18 @@
+title: HackUVic
+description: !markdown |
+  As organizer for the UVic Web Design and Development Club I ran HackUVic for 2 years. I addition to managing the hackathon I did all the design and branding for the event.
+
+  With input from the organizing team, I designed the website, t-shirts, posters, stickers, badges and other miscellaneous collateral both years.
+
+
+date: 2018-02-01
+gallery:
+  -
+    alt: The HackUVic Logo
+    src: !file ../../img/hackuvic/logo.png
+  -
+    alt: Some HackUVic promotional materials
+    src: !file ../../img/hackuvic/promo.jpg
+  -
+    alt: The HackUVic t-shirts
+    src: !file ../../img/hackuvic/shirt-mockups.jpg
