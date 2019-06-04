@@ -69,7 +69,7 @@ export const query = graphql`
         childFileYaml {
           childImageSharp {
             fluid(maxWidth: 700) {
-              ...GatsbyImageSharpFluid_noBase64
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }

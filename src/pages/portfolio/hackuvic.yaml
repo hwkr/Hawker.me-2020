@@ -11,6 +11,7 @@ gallery:
   -
     alt: The HackUVic Logo
     src: !file ../../img/hackuvic/logo.png
+    caption: The HackUVic Logo
   -
     alt: Some HackUVic promotional materials
     src: !file ../../img/hackuvic/promo.jpg

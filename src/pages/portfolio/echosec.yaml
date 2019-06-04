@@ -14,3 +14,7 @@ gallery:
     alt: A mockup of the Echosec App Login Page
     src: !file ../../img/echosec/login-mockup.png
     caption: Redesigned Echosec Login Page
+  -
+    alt: A mockup of the Echosec App Signup Page
+    src: !file ../../img/echosec/signup-mockup.png
+    caption: Redesigned Echosec Signup Page
