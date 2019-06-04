@@ -62,7 +62,10 @@ export default class IndexPage extends Component {
               <div className="filter-nav">
                 <label className="chip" htmlFor="tag-0"> All</label>
                 { tagSpec.map((t, i) => (
-                  <label className="chip" htmlFor={`tag-${i + 1}`} key={i}>{t.label}</label>
+                  <label className="chip" htmlFor={`tag-${i + 1}`} key={i}>
+                    <figure className="avatar avatar-sm" data-initial="UX" style={{ backgroundColor: '#333' }} />
+                    {t.label}
+                  </label>
                 ))}
               </div>
 
