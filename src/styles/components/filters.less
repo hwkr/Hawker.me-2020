@@ -1,7 +1,10 @@
 // Filters
+// The number of filter options
+@filter-number: 8;
+
 .filter {
   .filter-nav {
-    margin: 1rem 0;
+    margin: @layout-margin 0;
   }
 
   .filter-body {
@@ -10,20 +13,17 @@
   }
 
   .filter-tag {
-    &#tag-all:checked ~ .filter-nav .chip[for="tag-all"],
-    &#tag-action:checked ~ .filter-nav .chip[for="tag-action"],
-    &#tag-roleplaying:checked ~ .filter-nav .chip[for="tag-roleplaying"],
-    &#tag-shooter:checked ~ .filter-nav .chip[for="tag-shooter"],
-    &#tag-sports:checked ~ .filter-nav .chip[for="tag-sports"] {
-      background: @primary-color;
-      color: @light-color;
-    }
+    each(range(0, @filter-number), {
+      &#tag-@{value}:checked ~ .filter-nav .chip[for="tag-@{value}"] {
+        background: @primary-color;
+        color: @light-color;
+      }
+    })
 
-    &#tag-action:checked ~ .filter-body .column:not([data-tag~="tag-action"]),
-    &#tag-roleplaying:checked ~ .filter-body .column:not([data-tag~="tag-roleplaying"]),
-    &#tag-shooter:checked ~ .filter-body .column:not([data-tag~="tag-shooter"]),
-    &#tag-sports:checked ~ .filter-body .column:not([data-tag~="tag-sports"]) {
-      display: none;
-    }
+    each(range(1, @filter-number), {
+      &#tag-@{value}:checked ~ .filter-body .filter-item:not([data-tag~="tag-@{value}"]) {
+        display: none;
+      }
+    })
   }
 }

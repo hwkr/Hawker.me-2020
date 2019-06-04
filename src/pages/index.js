@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/label-has-for */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/parts/Layout';
 import Icon from '../components/common/Icon';
@@ -18,7 +20,9 @@ export default class IndexPage extends Component {
 
   render() {
     const { data } = this.props;
-    const { social_links: socialLinks } = data.site.siteMetadata;
+    const { social_links: socialLinks, tag_spec: tagSpec } = data.site.siteMetadata;
+    const portfolioProjects = data.allPortfolioYaml.edges.map(e => e.node);
+
     return (
       <Layout className="home">
         <button
@@ -30,7 +34,7 @@ export default class IndexPage extends Component {
           <Icon name="social-facebook-messenger" size={1.5} />
         </button>
         <header className="splash">
-          <div className="hero">
+          <div className="container grid-720 hero">
             <div>
               <h1>
                 <small>Hello! I&apos;m </small>
@@ -47,6 +51,48 @@ export default class IndexPage extends Component {
             </div>
           </div>
         </header>
+        <main>
+          <div className="container grid-720">
+            <div className="filter">
+              <input type="radio" id="tag-0" className="filter-tag" name="filter-radio" hidden defaultChecked />
+              { tagSpec.map((t, i) => (
+                <input type="radio" id={`tag-${i + 1}`} className="filter-tag" name="filter-radio" key={i} hidden />
+              ))}
+
+              <div className="filter-nav">
+                <label className="chip" htmlFor="tag-0"> All</label>
+                { tagSpec.map((t, i) => (
+                  <label className="chip" htmlFor={`tag-${i + 1}`} key={i}>{t.label}</label>
+                ))}
+              </div>
+
+              <div className="filter-body columns">
+                { portfolioProjects.map((project, i) => {
+                  const { title, tags } = project;
+                  const { slug } = project.fields;
+
+                  const tagNums = tags.map(tag => tagSpec.findIndex(t => t.id === tag) + 1);
+                  return (
+                    <div className="filter-item column col-4" data-tag={tagNums.map(n => `tag-${n}`).join(' ')} key={i}>
+                      <Link to={slug} className="card card-link">
+                        <div className="card-header">
+                          <div className="card-title h2">{title}</div>
+                          <div className="card-subtitle text-gray">
+                            {tags.map((tag, j) => (
+                              <span className="label" key={j}>
+                                {tagSpec.find(t => t.id === tag).label}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </main>
       </Layout>
     );
   }
@@ -62,6 +108,21 @@ export const query = graphql`
           href,
           tooltip,
           icon,
+        },
+        tag_spec {
+          id,
+          label
+        }
+      }
+    }
+    allPortfolioYaml (sort: { order: DESC, fields: [date] })  {
+      edges {
+        node {
+          title
+          tags
+          fields {
+            slug
+          }
         }
       }
     }

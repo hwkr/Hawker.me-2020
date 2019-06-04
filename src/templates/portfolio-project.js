@@ -14,7 +14,7 @@ export default ({ data }) => {
     childrenPortfolioGalleryYaml,
   } = data.portfolioYaml;
 
-  const { tag_spec } = data.site.siteMetadata;
+  const { tag_spec: tagSpec } = data.site.siteMetadata;
 
   return (
     <Layout className="portfolio-project">
@@ -41,7 +41,7 @@ export default ({ data }) => {
                 <div className="card-subtitle text-gray">
                   {tags.map((tag, i) => (
                     <span className="label" key={i}>
-                      {tag_spec.find(t => t.id === tag).label}
+                      {tagSpec.find(t => t.id === tag).label}
                     </span>
                   ))}
                 </div>
