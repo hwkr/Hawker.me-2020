@@ -7,6 +7,7 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/parts/Layout';
 import Icon from '../components/common/Icon';
 import SocialLinks from '../components/common/SocialLinks';
+import ProjectTags from '../components/common/ProjectTags';
 
 export default class IndexPage extends Component {
   static propTypes = {
@@ -52,7 +53,7 @@ export default class IndexPage extends Component {
           </div>
         </header>
         <main>
-          <div className="container grid-720">
+          <div className="container grid-960">
             <div className="filter">
               <input type="radio" id="tag-0" className="filter-tag" name="filter-radio" hidden defaultChecked />
               { tagSpec.map((t, i) => (
@@ -63,7 +64,9 @@ export default class IndexPage extends Component {
                 <label className="chip" htmlFor="tag-0"> All</label>
                 { tagSpec.map((t, i) => (
                   <label className="chip" htmlFor={`tag-${i + 1}`} key={i}>
-                    <figure className="avatar avatar-sm" data-initial="UX" style={{ backgroundColor: '#333' }} />
+                    <figure className="avatar avatar-sm avatar-clear">
+                      <Icon name={t.icon} />
+                    </figure>
                     {t.label}
                   </label>
                 ))}
@@ -80,12 +83,8 @@ export default class IndexPage extends Component {
                       <Link to={slug} className="card card-link">
                         <div className="card-header">
                           <div className="card-title h2">{title}</div>
-                          <div className="card-subtitle text-gray">
-                            {tags.map((tag, j) => (
-                              <span className="label" key={j}>
-                                {tagSpec.find(t => t.id === tag).label}
-                              </span>
-                            ))}
+                          <div className="card-subtitle">
+                            <ProjectTags tags={tags} />
                           </div>
                         </div>
                       </Link>
@@ -114,6 +113,7 @@ export const query = graphql`
         },
         tag_spec {
           id,
+          icon,
           label
         }
       }

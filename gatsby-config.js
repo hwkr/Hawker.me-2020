@@ -8,15 +8,23 @@ module.exports = {
     tag_spec: [
       {
         id: 'uiux',
+        icon: 'device-laptop',
         label: 'UI / UX Design',
       },
       {
         id: 'visual',
-        label: 'Visual Design',
+        icon: 'brush',
+        label: 'Illustration',
       },
       {
         id: 'brand',
+        icon: 'lightbulb',
         label: 'Branding',
+      },
+      {
+        id: 'development',
+        icon: 'code',
+        label: 'Development',
       },
     ],
     console_cats: [

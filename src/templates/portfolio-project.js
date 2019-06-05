@@ -5,6 +5,7 @@ import Img from 'gatsby-image';
 import Helmet from 'react-helmet';
 
 import Layout from '../components/parts/Layout';
+import ProjectTags from '../components/common/ProjectTags';
 
 export default ({ data }) => {
   const {
@@ -13,8 +14,6 @@ export default ({ data }) => {
     tags,
     childrenPortfolioGalleryYaml,
   } = data.portfolioYaml;
-
-  const { tag_spec: tagSpec } = data.site.siteMetadata;
 
   return (
     <Layout className="portfolio-project">
@@ -39,11 +38,7 @@ export default ({ data }) => {
               <div className="card-header">
                 <div className="card-title h2">{title}</div>
                 <div className="card-subtitle text-gray">
-                  {tags.map((tag, i) => (
-                    <span className="label" key={i}>
-                      {tagSpec.find(t => t.id === tag).label}
-                    </span>
-                  ))}
+                  <ProjectTags tags={tags} />
                 </div>
               </div>
               { /* eslint-disable-next-line react/no-danger */ }
@@ -72,14 +67,6 @@ export const query = graphql`
               ...GatsbyImageSharpFluid_tracedSVG
             }
           }
-        }
-      }
-    }
-    site {
-      siteMetadata {
-        tag_spec {
-          id
-          label
         }
       }
     }
