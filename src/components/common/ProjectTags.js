@@ -7,7 +7,11 @@ import Icon from './Icon';
 
 export default class ProjectTags extends Component {
   static propTypes = {
-    tags: PropTypes.string.isRequired,
+    tags: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.string,
+      icon: PropTypes.string,
+      label: PropTypes.string,
+    })).isRequired,
   }
 
   render() {
@@ -35,8 +39,8 @@ export default class ProjectTags extends Component {
               {tags.map((tag, j) => {
                 const ts = tagSpec.find(t => t.id === tag);
                 return (
-                  <span>
-                    <span className="chip" key={j}>
+                  <span key={j}>
+                    <span className="chip">
                       <figure className="avatar avatar-sm avatar-clear">
                         <Icon name={ts.icon} />
                       </figure>

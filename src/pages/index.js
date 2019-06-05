@@ -60,14 +60,16 @@ export default class IndexPage extends Component {
                 <input type="radio" id={`tag-${i + 1}`} className="filter-tag" name="filter-radio" key={i} hidden />
               ))}
 
-              <div className="filter-nav btn-group">
-                <label className="btn" htmlFor="tag-0"> All</label>
-                { tagSpec.map((t, i) => (
-                  <label className="btn" htmlFor={`tag-${i + 1}`} key={i}>
-                    <Icon name={t.icon} />
-                    {t.label}
-                  </label>
-                ))}
+              <div className="filter-nav">
+                <div className="btn-group">
+                  <label className="btn" htmlFor="tag-0"> All</label>
+                  { tagSpec.map((t, i) => (
+                    <label className="btn" htmlFor={`tag-${i + 1}`} key={i}>
+                      <Icon name={t.icon} />
+                      {t.label}
+                    </label>
+                  ))}
+                </div>
               </div>
 
               <div className="filter-body columns">
