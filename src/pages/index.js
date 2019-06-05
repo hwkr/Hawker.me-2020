@@ -60,13 +60,11 @@ export default class IndexPage extends Component {
                 <input type="radio" id={`tag-${i + 1}`} className="filter-tag" name="filter-radio" key={i} hidden />
               ))}
 
-              <div className="filter-nav">
-                <label className="chip" htmlFor="tag-0"> All</label>
+              <div className="filter-nav btn-group">
+                <label className="btn" htmlFor="tag-0"> All</label>
                 { tagSpec.map((t, i) => (
-                  <label className="chip" htmlFor={`tag-${i + 1}`} key={i}>
-                    <figure className="avatar avatar-sm avatar-clear">
-                      <Icon name={t.icon} />
-                    </figure>
+                  <label className="btn" htmlFor={`tag-${i + 1}`} key={i}>
+                    <Icon name={t.icon} />
                     {t.label}
                   </label>
                 ))}
