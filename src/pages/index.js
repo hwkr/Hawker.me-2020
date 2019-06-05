@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 import Layout from '../components/parts/Layout';
 import Icon from '../components/common/Icon';
@@ -74,15 +75,22 @@ export default class IndexPage extends Component {
 
               <div className="filter-body columns">
                 { portfolioProjects.map((project, i) => {
-                  const { title, tags } = project;
+                  const {
+                    title,
+                    tags,
+                    background,
+                    childFileYaml,
+                  } = project;
                   const { slug } = project.fields;
-
                   const tagNums = tags.map(tag => tagSpec.findIndex(t => t.id === tag) + 1);
                   return (
                     <div className="filter-item column col-4" data-tag={tagNums.map(n => `tag-${n}`).join(' ')} key={i}>
-                      <Link to={slug} className="card card-link">
+                      <Link to={slug} className="card card-link" style={{ backgroundImage: `url("${background}")` }}>
+                        <div className="card-image">
+                          <Img className="img-responsive" fluid={childFileYaml.childImageSharp.fluid} alt={title} />
+                        </div>
                         <div className="card-header">
-                          <div className="card-title h2">{title}</div>
+                          {/* <div className="card-title h2">{title}</div> */}
                           <div className="card-subtitle">
                             <ProjectTags tags={tags} />
                           </div>
@@ -123,8 +131,16 @@ export const query = graphql`
         node {
           title
           tags
+          background
           fields {
             slug
+          }
+          childFileYaml {
+            childImageSharp {
+              fluid(maxWidth: 320) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
           }
         }
       }
