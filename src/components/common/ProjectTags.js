@@ -7,11 +7,7 @@ import Icon from './Icon';
 
 export default class ProjectTags extends Component {
   static propTypes = {
-    tags: PropTypes.arrayOf(PropTypes.shape({
-      id: PropTypes.string,
-      icon: PropTypes.string,
-      label: PropTypes.string,
-    })).isRequired,
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
   }
 
   render() {
