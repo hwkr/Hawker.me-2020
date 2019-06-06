@@ -6,8 +6,10 @@
   .project-gallery {
     .card {
       margin-bottom: @layout-padding-xl;
+      &:hover {
+        cursor: zoom-in;
+      }
     }
-
   }
   .project-info {
     flex: 0 0 @sidebar-width;
@@ -19,6 +21,21 @@
         font-size: 2.4rem;
         margin-bottom: @layout-margin;
       }
+    }
+  }
+
+  &.gallery-maximized {
+
+    .project-gallery {
+      .card {
+        &:hover {
+          cursor: zoom-out;
+        }
+      }
+    }
+
+    .project-info {
+      display: none;
     }
   }
 }
