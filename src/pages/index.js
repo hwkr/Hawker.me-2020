@@ -26,7 +26,7 @@ export default class IndexPage extends Component {
     const portfolioProjects = data.allPortfolioYaml.edges.map(e => e.node);
 
     return (
-      <Layout className="home">
+      <Layout className="home" showNavbar={false}>
         <button
           className="btn btn-primary btn-action btn-lg tooltip tooltip-left circle"
           data-tooltip="Talk to me right meow"
