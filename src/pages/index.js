@@ -67,6 +67,7 @@ export default class IndexPage extends Component {
                   { tagSpec.map((t, i) => (
                     <label className="btn" htmlFor={`tag-${i + 1}`} key={i}>
                       <Icon name={t.icon} />
+                      &nbsp;
                       {t.label}
                     </label>
                   ))}
