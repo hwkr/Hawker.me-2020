@@ -30,7 +30,7 @@ export default class Navbar extends Component {
             type="button"
           >
             <Icon name="social-facebook-messenger-bubble" />
-            Contact
+            Get in touch
           </button>
         </section>
       </header>
