@@ -1,11 +1,11 @@
 .portfolio-project {
-  .container {
+  .project {
     padding-top: @layout-padding-xl;
     padding-bottom: @layout-padding-xl;
   }
   .project-gallery {
     .card {
-      margin-bottom: @layout-padding-xl;
+      margin-bottom: @layout-margin;
       &:hover {
         cursor: zoom-in;
       }
@@ -24,18 +24,37 @@
     }
   }
 
-  &.gallery-maximized {
+  @media screen and (max-width: @size-md ) {
+    .project-info {
+      flex: none;
+      .card {
+        position: unset;
+        width: unset;
+      }
+    }
+  }
+
+// Maximization
+
+@media screen and (min-width: 1+@size-md ) {
 
     .project-gallery {
-      .card {
-        &:hover {
-          cursor: zoom-out;
-        }
+      .card:hover {
+        cursor: zoom-in;
       }
     }
 
-    .project-info {
-      display: none;
+    &.gallery-maximized {
+
+      .project-gallery {
+        .card:hover {
+          cursor: zoom-out;
+        }
+      }
+
+      .project-info {
+        display: none;
+      }
     }
   }
 }
