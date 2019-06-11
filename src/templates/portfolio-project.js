@@ -51,7 +51,7 @@ export default class PortfolioProjectPage extends Component {
                 const { section, alt, childFileYaml } = image;
                 if (section) {
                   return (
-                    <div className="divider text-center" data-content={section.toUpperCase()} />
+                    <div className="divider text-center" data-content={section} />
                   );
                 }
                 return (
