@@ -25,7 +25,7 @@ export default class Navbar extends Component {
         </section>
         <section className="navbar-section">
           <button
-            className="btn btn-lg"
+            className="btn"
             onClick={this.openChat}
             type="button"
           >
