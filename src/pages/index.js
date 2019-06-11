@@ -61,19 +61,6 @@ export default class IndexPage extends Component {
                 <input type="radio" id={`tag-${i + 1}`} className="filter-tag" name="filter-radio" key={i} hidden />
               ))}
 
-              <div className="filter-nav">
-                <div className="btn-group">
-                  <label className="btn" htmlFor="tag-0"> All</label>
-                  { tagSpec.map((t, i) => (
-                    <label className="btn" htmlFor={`tag-${i + 1}`} key={i}>
-                      <Icon name={t.icon} />
-                      &nbsp;
-                      {t.label}
-                    </label>
-                  ))}
-                </div>
-              </div>
-
               <div className="filter-body columns">
                 { portfolioProjects.map((project, i) => {
                   const {
@@ -85,7 +72,7 @@ export default class IndexPage extends Component {
                   const { slug } = project.fields;
                   const tagNums = tags.map(tag => tagSpec.findIndex(t => t.id === tag) + 1);
                   return (
-                    <div className="filter-item column col-4" data-tag={tagNums.map(n => `tag-${n}`).join(' ')} key={i}>
+                    <div className="filter-item column col-4 col-sm-12" data-tag={tagNums.map(n => `tag-${n}`).join(' ')} key={i}>
                       <Link to={slug} className="card card-link" style={{ backgroundImage: `url("${background}")` }}>
                         <div className="card-image">
                           <Img className="img-responsive" fluid={childFileYaml.childImageSharp.fluid} alt={title} />
@@ -100,6 +87,19 @@ export default class IndexPage extends Component {
                     </div>
                   );
                 })}
+              </div>
+
+              <div className="filter-nav">
+                <div className="btn-group">
+                  <label className="btn" htmlFor="tag-0"> All</label>
+                  { tagSpec.map((t, i) => (
+                    <label className="btn" htmlFor={`tag-${i + 1}`} key={i}>
+                      <Icon name={t.icon} />
+                      &nbsp;
+                      {t.label}
+                    </label>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
