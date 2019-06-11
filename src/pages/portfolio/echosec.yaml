@@ -13,6 +13,7 @@ gallery:
   -
     alt: A mockup of the Echosec Website
     src: !file ../../img/echosec/website-mockup.png
+  - section: App
   -
     alt: A mockup of the Echosec App Login Page
     src: !file ../../img/echosec/login-mockup.png

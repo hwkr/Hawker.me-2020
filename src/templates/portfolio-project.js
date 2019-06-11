@@ -48,7 +48,12 @@ export default class PortfolioProjectPage extends Component {
             </div>
             <div className="column col-md-12 project-gallery">
               { childrenPortfolioGalleryYaml.map((image, i) => {
-                const { alt, childFileYaml } = image;
+                const { section, alt, childFileYaml } = image;
+                if (section) {
+                  return (
+                    <div className="divider text-center" data-content={section} />
+                  );
+                }
                 return (
                   <a className="card project-gallery-item" href={`#${childFileYaml.name}`} onClick={this.toggleGalleryMaximized} role="button" tabIndex={0} onKeyPress={this.handleKeyPress} key={i} id={childFileYaml.name}>
                     <div className="card-image">
@@ -75,6 +80,7 @@ export const query = graphql`
       childrenPortfolioGalleryYaml {
         alt
         caption
+        section
         childFileYaml {
           name
           childImageSharp {
