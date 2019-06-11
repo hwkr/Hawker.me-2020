@@ -6,9 +6,6 @@
   .project-gallery {
     .card {
       margin-bottom: @layout-margin;
-      &:hover {
-        cursor: zoom-in;
-      }
     }
     .divider {
       margin: @layout-padding-xl 0;
@@ -22,7 +19,10 @@
     .card {
       position: fixed;
       width: @sidebar-width - 2*@layout-padding;
-
+      .card-header {
+        padding-bottom: @layout-padding;
+        border-bottom: @border-width solid @border-color;
+      }
       .card-title {
         font-size: 2.4rem;
         margin-bottom: @layout-margin;

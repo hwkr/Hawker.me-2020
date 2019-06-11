@@ -16,17 +16,19 @@ export default class Layout extends Component {
   static propTypes = {
     showNavbar: PropTypes.bool,
     className: PropTypes.string,
+    style: PropTypes.object,
     children: PropTypes.any,
   }
 
   static defaultProps = {
     showNavbar: true,
     className: '',
+    style: {},
     children: '',
   }
 
   render() {
-    const { className, children } = this.props;
+    const { className, style, children } = this.props;
 
     return (
       <StaticQuery
@@ -47,12 +49,17 @@ export default class Layout extends Component {
           }
         `}
         render={(data) => {
-          const { title, console_cats, social_links, chat_url } = data.site.siteMetadata;
+          const {
+            title,
+            console_cats,
+            social_links,
+            chat_url,
+          } = data.site.siteMetadata;
           const { showNavbar } = this.props;
           // eslint-disable-next-line no-console
           console.log(...console_cats);
           return (
-            <div className={`layout ${className}`}>
+            <div className={`layout ${className}`} style={style}>
               <Helmet titleTemplate={`%s → ${title}`} defaultTitle={title} />
               { showNavbar ? <Navbar chatUrl={chat_url} /> : '' }
               { children }

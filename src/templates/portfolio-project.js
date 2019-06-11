@@ -26,6 +26,7 @@ export default class PortfolioProjectPage extends Component {
       description,
       tags,
       links,
+      background,
       childrenPortfolioGalleryYaml,
     } = data.portfolioYaml;
 
@@ -38,7 +39,7 @@ export default class PortfolioProjectPage extends Component {
           <div className="columns">
             <div className="column col-md-12 project-info">
               <div className="card">
-                <div className="card-header">
+                <div className="card-header" style={{ backgroundImage: `url("${background}")` }}>
                   <div className="card-title h2">{title}</div>
                   <div className="card-subtitle text-gray">
                     <ProjectTags tags={tags} />
@@ -89,6 +90,7 @@ export const query = graphql`
     portfolioYaml(fields: { slug: { eq: $slug } }) {
       title
       description
+      background
       date
       tags
       links {
