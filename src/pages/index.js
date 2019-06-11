@@ -89,7 +89,7 @@ export default class IndexPage extends Component {
                 })}
               </div>
 
-              <div className="filter-nav">
+              <div className="filter-nav hide-sm">
                 <div className="btn-group">
                   <label className="btn" htmlFor="tag-0"> All</label>
                   { tagSpec.map((t, i) => (
