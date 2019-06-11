@@ -26,6 +26,11 @@ module.exports = {
         icon: 'code',
         label: 'Development',
       },
+      {
+        id: 'talk',
+        icon: 'messages',
+        label: 'Talk',
+      },
     ],
     console_cats: [
       String.raw`

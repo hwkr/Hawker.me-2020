@@ -1,0 +1,95 @@
+title: Crashcourse
+image: !file ../../img/crashcourse/card.png
+tags: [ talk, development ]
+description: !markdown |
+  A workshop for the UVic Web Development and Design Club which to get our new members started with web development. It provides [an intro](#crashcourse-slide-4) to how the internet works and then [gets them started](#crashcourse-slide-13) creating a simple webpage.
+
+links:
+  -
+    href: https://hwkr.github.io/CrashCourse/slides/
+    icon: device-desktop
+    label: Full Slide Deck
+  -
+    href: https://github.com/hwkr/CrashCourse
+    icon: social-github
+    label: Source
+date: 2016-01-01
+gallery:
+  -
+    alt: Crashcourse Title Slide
+    src: !file ../../img/crashcourse/crashcourse-slide-1.png
+  -
+    alt: Crashcourse Summary Slide
+    src: !file ../../img/crashcourse/crashcourse-slide-2.png
+  -
+    section: The Internets
+  -
+    alt: How did the internet start?
+    src: !file ../../img/crashcourse/crashcourse-slide-4.png
+  -
+    alt: Diagram of the World Wide Web
+    src: !file ../../img/crashcourse/crashcourse-slide-6.png
+  -
+    alt: Hyper Text Transfer Protocol
+    src: !file ../../img/crashcourse/crashcourse-slide-7.png
+  -
+    alt: HTTP Requests
+    src: !file ../../img/crashcourse/crashcourse-slide-8.png
+  -
+    alt:  An HTTP Get Request
+    src: !file ../../img/crashcourse/crashcourse-slide-9.png
+  -
+    alt: Examining HTTP Requests
+    src: !file ../../img/crashcourse/crashcourse-slide-11.png
+  -
+    section: HTML & CSS
+  -
+    alt: Hypertext Markup Language
+    src: !file ../../img/crashcourse/crashcourse-slide-13.png
+  -
+    alt: A basic webpage
+    src: !file ../../img/crashcourse/crashcourse-slide-14.png
+  -
+    alt: Rendering of a basic webpage
+    src: !file ../../img/crashcourse/crashcourse-slide-15.png
+  -
+    alt: HTML block elements
+    src: !file ../../img/crashcourse/crashcourse-slide-16.png
+  -
+    alt: HTML inline elements
+    src: !file ../../img/crashcourse/crashcourse-slide-17.png
+  -
+    alt: Self closing elements
+    src: !file ../../img/crashcourse/crashcourse-slide-18.png
+  -
+    alt: Element attributes
+    src: !file ../../img/crashcourse/crashcourse-slide-19.png
+  -
+    alt: Mozilla Developer Network
+    src: !file ../../img/crashcourse/crashcourse-slide-20.png
+  -
+    alt: A page on Mozilla Developer Network
+    src: !file ../../img/crashcourse/crashcourse-slide-21.png
+  -
+    alt: IDs and Classes
+    src: !file ../../img/crashcourse/crashcourse-slide-24.png
+  -
+    alt: Codepen demo
+    src: !file ../../img/crashcourse/crashcourse-slide-25.png
+  -
+    alt: CSS selectors and properties
+    src: !file ../../img/crashcourse/crashcourse-slide-27.png
+  -
+    alt: Combining selectors
+    src: !file ../../img/crashcourse/crashcourse-slide-28.png
+  -
+    alt: Codepen demo
+    src: !file ../../img/crashcourse/crashcourse-slide-29.png
+  -
+    alt: Let's write some code
+    src: !file ../../img/crashcourse/crashcourse-slide-30.png
+
+
+background:
+  "data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.2'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E"
+

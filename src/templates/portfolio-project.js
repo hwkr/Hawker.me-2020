@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import Helmet from 'react-helmet';
 
 import Layout from '../components/parts/Layout';
+import Icon from '../components/common/Icon';
 import ProjectTags from '../components/common/ProjectTags';
 
 export default class PortfolioProjectPage extends Component {
@@ -24,6 +25,7 @@ export default class PortfolioProjectPage extends Component {
       title,
       description,
       tags,
+      links,
       childrenPortfolioGalleryYaml,
     } = data.portfolioYaml;
 
@@ -44,6 +46,18 @@ export default class PortfolioProjectPage extends Component {
                 </div>
                 { /* eslint-disable-next-line react/no-danger */ }
                 <div className="card-body" dangerouslySetInnerHTML={{ __html: description }} />
+                { links ? (
+                  <div className="card-footer">
+                    { links.map((link, i) => (
+                      <a href={link.href} className={classNames('btn', { 'btn-link': i > 0 })} key={i} target={link.href.startsWith('http') ? '_blank' : ''}>
+                        <Icon name={link.icon} />
+                        &nbsp;
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
+                ) : ''}
+
               </div>
             </div>
             <div className="column col-md-12 project-gallery">
@@ -77,6 +91,11 @@ export const query = graphql`
       description
       date
       tags
+      links {
+        href
+        icon
+        label
+      }
       childrenPortfolioGalleryYaml {
         alt
         caption

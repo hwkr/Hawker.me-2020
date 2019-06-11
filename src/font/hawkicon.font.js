@@ -12,6 +12,7 @@ const icons = [
   'icons/device-phone.svg',
   'icons/heart.svg',
   'icons/lightbulb.svg',
+  'icons/messages.svg',
   'icons/social-dribbble.svg',
   'icons/social-facebook.svg',
   'icons/social-facebook-messenger.svg',
