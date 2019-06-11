@@ -1,6 +1,6 @@
 .portfolio-project {
   .project {
-    padding-top: @layout-padding-xl;
+    padding-top: @layout-padding;
     padding-bottom: @layout-padding-xl;
   }
   .project-gallery {
@@ -15,10 +15,7 @@
     }
   }
   .project-info {
-    flex: 0 0 @sidebar-width;
     .card {
-      position: fixed;
-      width: @sidebar-width - 2*@layout-padding;
       .card-header {
         padding-bottom: @layout-padding;
         border-bottom: @border-width solid @border-color;
@@ -30,12 +27,17 @@
     }
   }
 
-  @media screen and (max-width: @size-md ) {
+  @media screen and (min-width: 1+@size-md ) {
+    .navbar {
+      .navbar-brand {
+        position: fixed;
+      }
+    }
     .project-info {
-      flex: none;
+      flex: 0 0 @sidebar-width;
       .card {
-        position: unset;
-        width: unset;
+        position: fixed;
+        width: @sidebar-width - 2*@layout-padding;
       }
     }
   }
