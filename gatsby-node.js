@@ -47,9 +47,10 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   return graphql(`
     {
-      allPortfolioYaml {
+      allPortfolioYaml (sort: { order: DESC, fields: [date] }) {
         edges {
           node {
+            title
             fields {
               slug
             }
@@ -58,13 +59,19 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then((result) => {
-    result.data.allPortfolioYaml.edges.forEach(({ node }) => {
+    const projects = result.data.allPortfolioYaml.edges;
+
+    projects.forEach(({ node }, i) => {
+      const pageContext = {
+        slug: node.fields.slug,
+      };
+      pageContext.prevEntry = (i > 0) ? projects[i - 1].node : null;
+      pageContext.nextEntry = (i < projects.length - 1) ? projects[i + 1].node : null;
+      console.log(pageContext);
       createPage({
         path: node.fields.slug,
         component: path.resolve('./src/templates/portfolio-project.js'),
-        context: {
-          slug: node.fields.slug,
-        },
+        context: pageContext,
       });
     });
   });

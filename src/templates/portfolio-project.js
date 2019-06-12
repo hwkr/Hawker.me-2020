@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import classNames from 'classnames';
 
@@ -20,7 +20,7 @@ export default class PortfolioProjectPage extends Component {
   }
 
   render() {
-    const { data } = this.props;
+    const { data, pageContext } = this.props;
     const {
       title,
       description,
@@ -65,7 +65,7 @@ export default class PortfolioProjectPage extends Component {
                 const { section, alt, childFileYaml } = image;
                 if (section) {
                   return (
-                    <div className="divider text-center" data-content={section} />
+                    <div className="divider text-center" data-content={section} key={i} />
                   );
                 }
                 return (
@@ -78,6 +78,26 @@ export default class PortfolioProjectPage extends Component {
               })}
             </div>
           </div>
+          <ul className="pagination">
+            { pageContext.prevEntry ? (
+              <li className="page-item page-prev">
+                <Link to={pageContext.prevEntry.fields.slug}>
+                  <div className="page-item-subtitle">Previous</div>
+                  <div className="page-item-title h5">{pageContext.prevEntry.title}</div>
+                </Link>
+              </li>
+            ) : ''
+            }
+            { pageContext.nextEntry ? (
+              <li className="page-item page-next">
+                <Link to={pageContext.nextEntry.fields.slug}>
+                  <div className="page-item-subtitle">Next</div>
+                  <div className="page-item-title h5">{pageContext.nextEntry.title}</div>
+                </Link>
+              </li>
+            ) : ''
+            }
+          </ul>
         </div>
       </Layout>
     );
