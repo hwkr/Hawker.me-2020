@@ -51,8 +51,7 @@ export default class PortfolioProjectPage extends Component {
                   <div className="card-footer">
                     { links.map((link, i) => (
                       <a href={link.href} className={classNames('btn', { 'btn-link': i > 0 })} key={i} target={link.href.startsWith('http') ? '_blank' : ''}>
-                        <Icon name={link.icon} />
-                        &nbsp;
+                        { link.icon ? <span><Icon name={link.icon} />&nbsp;</span> : '' }
                         {link.label}
                       </a>
                     ))}
