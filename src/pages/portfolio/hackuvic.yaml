@@ -2,9 +2,9 @@ title: HackUVic
 image: !file ../../img/hackuvic/card.png
 tags: [ brand, visual ]
 description: !markdown |
-  As organizer for the UVic Web Design and Development Club I ran HackUVic for 2 years. I addition to managing the hackathon I did all the design and branding for the event.
+  As organizer for the UVic Web Design and Development Club I ran HackUVic for 2 years. In addition to [managing the hackathon](#hackuvic-01) I did all the design and branding for the event.
 
-  With input from the organizing team, I designed the website, t-shirts, posters, stickers, badges and other miscellaneous collateral both years.
+  With input from the organizing team, I designed [the website](#website-2017) as well as [t-shirts, posters, stickers, badges and other miscellaneous collateral](#promo) both years.
 
 date: 2018-02-01
 gallery:
@@ -16,8 +16,24 @@ gallery:
     alt: Some HackUVic promotional materials
     src: !file ../../img/hackuvic/promo.jpg
   -
-    alt: The HackUVic t-shirts
-    src: !file ../../img/hackuvic/shirt-mockups.jpg
+    section: Website
+  -
+    alt: The 2017 HackUVic Website
+    src: !file ../../img/hackuvic/website-2017.png
+  -
+    section: Event Photos
+  -
+    alt: Brynn Hawker presenting on stage
+    src: !file ../../img/hackuvic/hackuvic-01.jpg
+  -
+    alt: A hacker presenting their projects
+    src: !file ../../img/hackuvic/hackuvic-02.jpg
+  -
+    alt: The winners of the best hardware hack
+    src: !file ../../img/hackuvic/hackuvic-04.jpg
+  -
+    alt: The HackUVic hardware lab
+    src: !file ../../img/hackuvic/hackuvic-05.jpg
 
 
 background:
