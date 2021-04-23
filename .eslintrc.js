@@ -1,6 +1,6 @@
 module.exports = {
   "root": true,
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "extends": "airbnb",
   "env": {
     "browser": true,
@@ -16,7 +16,7 @@ module.exports = {
   },
   // These settings are needed for eslint to play well with webpack resolve
   "settings": {
-    "import/parser": "babel-eslint"
+    "import/parser": "@babel/eslint-parser"
   },
   "rules": {
     "max-len": "off",
