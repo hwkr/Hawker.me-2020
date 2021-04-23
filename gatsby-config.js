@@ -114,7 +114,7 @@ module.exports = {
         icon: 'social-stack-exchange',
       },
       {
-        href: 'http://steamcommunity.com/id/byteHero/',
+        href: 'https://steamcommunity.com/id/FreckleBytes/',
         tooltip: 'Game with me',
         icon: 'social-steam',
       },
