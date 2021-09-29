@@ -39,15 +39,13 @@ export default class IndexPage extends Component {
           <div className="container grid-720 hero">
             <div>
               <h1>
-                <small>Hello! I&apos;m </small>
-                <br />
                 <big>
                   Brynn
                   <br />
                   Hawker
                 </big>
                 <br />
-                <small>an artist / designer</small>
+                <small>Designer &times; Developer</small>
               </h1>
               <SocialLinks links={socialLinks} linkClass={['btn', 'btn-link', 'btn-lg', 'tooltip-bottom']} />
             </div>
