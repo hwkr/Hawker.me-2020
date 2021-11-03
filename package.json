@@ -46,7 +46,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-svg-inline": "^2.1.1",
-    "validator": "^10.11.0",
+    "validator": "^13.7.0",
     "webfonts-loader": "^4.4.0"
   },
   "devDependencies": {
